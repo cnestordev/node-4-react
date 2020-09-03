@@ -16,7 +16,7 @@ const Form = props => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        axios.post('http://localhost:8000/api/post', todo)
+        axios.post('https://react-cnestor.herokuapp.com/api/post', todo)
             .then(res => {
                 setTimeout(() => {
                     window.location.reload()

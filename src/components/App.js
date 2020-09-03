@@ -9,7 +9,7 @@ function App() {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:8000')
+        axios.get('https://react-cnestor.herokuapp.com')
             .then(res => {
                 setData(res.data.data)
             })

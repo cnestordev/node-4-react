@@ -21,7 +21,7 @@ const Todo = ({ item }) => {
     }
 
     const deleteItem = id => {
-        axios.delete(`http://localhost:8000/api/delete/${id}`)
+        axios.delete(`https://react-cnestor.herokuapp.com/api/delete/${id}`)
             .then(res => {
                 console.log(res)
                 setTimeout(() => {
@@ -32,7 +32,7 @@ const Todo = ({ item }) => {
     }
 
     const markComplete = id => {
-        axios.patch(`http://localhost:8000/api/patch/${id}`)
+        axios.patch(`https://react-cnestor.herokuapp.com/api/patch/${id}`)
             .then(res => {
                 setTimeout(() => {
                     window.location.reload()
@@ -46,7 +46,7 @@ const Todo = ({ item }) => {
     const handleSubmit = (e, id) => {
         e.preventDefault()
         console.log(e, id)
-        axios.put(`http://localhost:8000/api/put/${id}`, todo)
+        axios.put(`https://react-cnestor.herokuapp.com/api/put/${id}`, todo)
             .then(res => {
                 setTimeout(() => {
                     window.location.reload()
